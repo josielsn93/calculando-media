@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a média</title>
+</head>
+
+<body>
+
+    <p>Faça um programa que receba 4 notas de um aluno, calcule e imprima a média aritmética das notas e a mensagem de APROVADO para média superior ou igual a 7,0 RECUPERAÇÃO para notas entre 5.0 e 6,99 ou a mensagem de REPROVADO para média inferior a 5,0.</p>
+
+    <button onclick="calcularMedia()">Rodar Programa</button>
+
+    <script>
+        function calcularMedia() {
+            let n1 = parseFloat(prompt("Digite a primeira nota"));
+            let n2 = parseFloat(prompt("Digite a segunda nota"));
+            let n3 = parseFloat(prompt("Digite a terceira nota"));
+            let n4 = parseFloat(prompt("Digite a quarta nota"));
+
+            let media = (n1 + n2 + n3 + n4) / 4;
+            let mensagem;
+
+            if (media >= 7) {
+                mensagem = "Aprovado";
+                alert('Aprovado')
+            } else if (media >= 5 && media <= 6.99) {
+                mensagem = "Recuperação";
+                alert('Em recuperação')
+            } else {
+                mensagem = "Reprovado";
+                alert('Reprovado')
+            }
+            console.log("Média: " + media.toFixed(2));
+            console.log(mensagem);
+        }
+    </script>
+</body>
+
+</html>
